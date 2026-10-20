@@ -31,7 +31,7 @@ $$\sum_{n=1}^{\infty} \frac{n+1}{n^3+0{,}06}, \quad \varepsilon = 10^{-6}$$
 
 Оцениваем остаток ряда через интеграл:
 
-$$\int_{N+1}^{\infty} \frac{x+1}{x^3+0{,}06} \leq \int_{N+1}^{\infty} \frac{2x}{x^3} = \int_{N+1}^{\infty} \frac{2}{x^2} = 2\cdot\left(-\frac{1}{x}\right)\Bigg|_{N+1}^{\infty} = 2\left(0 - \left(-\frac{1}{N+1}\right)\right) = \frac{2}{N+1}$$
+$$\int_{N+1}^{\infty} \frac{x+1}{x^3+0{,}06}\,dx \leq \int_{N+1}^{\infty} \frac{2x}{x^3}\,dx = \int_{N+1}^{\infty} \frac{2}{x^2}\,dx = 2\cdot\left(-\frac{1}{x}\right)\Bigg|_{N+1}^{\infty} = 2\left(0 - \left(-\frac{1}{N+1}\right)\right) = \frac{2}{N+1}$$
 
 #### 2) Определение количества членов
 
@@ -45,9 +45,9 @@ $$N = 4\cdot 10^6 = 4\,000\,000$$
 
 #### 3) Оценка погрешности
 
-$$A_{S_N^*} = \sum_{n=1}^{N} A_{a_n^*} = N\cdot A_{a_n^*} \leq \frac{\varepsilon}{2}$$
+$$A_{S_{N}^{*}} = \sum_{n=1}^{N} A_{a_{n}^{*}} = N\cdot A_{a_{n}^{*}} \leq \frac{\varepsilon}{2}$$
 
-$$A_{a_n^*} \leq \frac{\varepsilon}{2N} = \frac{10^{-6}}{2\cdot 4\cdot 10^6} = \frac{10^{-12}}{8} = 1{,}25\cdot 10^{-13} = 0{,}125\cdot 10^{-12}$$
+$$A_{a_{n}^{*}} \leq \frac{\varepsilon}{2N} = \frac{10^{-6}}{2\cdot 4\cdot 10^6} = \frac{10^{-12}}{8} = 1{,}25\cdot 10^{-13} = 0{,}125\cdot 10^{-12}$$
 
 **Требуется 14 верных цифр после запятой**
 
@@ -75,7 +75,7 @@ $$p_n = a_n - \lambda b_n = \frac{n+1}{n^3+0{,}06} - \frac{1}{n^2} = \frac{n^3+n
 
 #### 1) Оценка остатка
 
-$$\int_{M+1}^{\infty} \frac{n^2-0{,}06}{n^2(n^3+0{,}06)} < \int_{M+1}^{\infty} \frac{x^2}{x^2\cdot x^3} = \int_{M+1}^{\infty} \frac{1}{x^3}\,dx = -\frac{1}{2x^2}\Bigg|_{M+1}^{\infty} = \frac{1}{2(M+1)^2}$$
+$$\int_{M+1}^{\infty} \frac{n^2-0{,}06}{n^2(n^3+0{,}06)}\,dn < \int_{M+1}^{\infty} \frac{x^2}{x^2\cdot x^3}\,dx = \int_{M+1}^{\infty} \frac{1}{x^3}\,dx = -\frac{1}{2x^2}\Bigg|_{M+1}^{\infty} = \frac{1}{2(M+1)^2}$$
 
 #### 2) Количество членов
 
@@ -87,9 +87,9 @@ $$M+1 \geq 1000, \quad M = 1000$$
 
 #### 3) Погрешность
 
-$$A_{S_M^*} = \sum_{n=1}^{M} A_{p_n^*} = M\cdot A_{p_n^*} \leq \frac{\varepsilon}{2}$$
+$$A_{S_{M}^{*}} = \sum_{n=1}^{M} A_{p_{n}^{*}} = M\cdot A_{p_{n}^{*}} \leq \frac{\varepsilon}{2}$$
 
-$$A_{p_n^*} \leq \frac{\varepsilon}{2M} = \frac{10^{-6}}{2\cdot 1000} = \frac{10^{-6}}{2000} = 0{,}5\cdot 10^{-9}$$
+$$A_{p_{n}^{*}} \leq \frac{\varepsilon}{2M} = \frac{10^{-6}}{2\cdot 1000} = \frac{10^{-6}}{2000} = 0{,}5\cdot 10^{-9}$$
 
 **Требуется 9 цифр после запятой**
 
